@@ -233,7 +233,7 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+  /* No max-width by default - blocks can set their own constraints */
   margin: auto;
   padding: 0 24px;
 }
