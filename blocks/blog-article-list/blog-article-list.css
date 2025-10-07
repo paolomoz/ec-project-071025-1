@@ -1,6 +1,8 @@
-/* Blog Article List Block - wrapper only */
-.blog-article-list {
-  width: 100%;
+/* Blog Article List Block */
+.blog-article-list-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 24px;
 }
 
 .blog-article-list.loading {
@@ -16,17 +18,14 @@
   font-size: var(--body-font-size-m);
 }
 
-/* Article Grid - the ul element */
-.article-grid {
+/* Article Grid */
+.blog-article-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 32px;
   list-style: none;
   padding: 0;
   margin: 0;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Article Card */
@@ -117,7 +116,7 @@
 
 /* Mobile Responsive */
 @media (width < 600px) {
-  .article-grid {
+  .blog-article-list {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -129,7 +128,7 @@
 
 /* Tablet */
 @media (width >= 600px) and (width < 900px) {
-  .article-grid {
+  .blog-article-list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
