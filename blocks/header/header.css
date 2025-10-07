@@ -265,4 +265,64 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* search form */
+header nav .nav-search {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: var(--light-color);
+  border-radius: 20px;
+  padding: 4px 8px;
+  transition: background-color 0.2s;
+}
+
+header nav .nav-search:focus-within {
+  background-color: #e8e8e8;
+}
+
+header nav .nav-search input[type="search"] {
+  border: none;
+  background: transparent;
+  padding: 4px 8px;
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+  outline: none;
+  width: 200px;
+}
+
+header nav .nav-search input[type="search"]::placeholder {
+  color: var(--dark-color);
+}
+
+header nav .nav-search button {
+  border: none;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-color);
+  transition: color 0.2s;
+}
+
+header nav .nav-search button:hover {
+  color: var(--text-color);
+}
+
+header nav .nav-search button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile search */
+@media (width < 900px) {
+  header nav .nav-search input[type="search"] {
+    width: 150px;
+  }
 }

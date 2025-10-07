@@ -159,6 +159,25 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
+  // Add search form to tools section
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    const searchForm = document.createElement('form');
+    searchForm.className = 'nav-search';
+    searchForm.method = 'GET';
+    searchForm.action = '/blog/search';
+    searchForm.innerHTML = `
+      <input type="search" name="q" placeholder="Search..." aria-label="Search">
+      <button type="submit" aria-label="Submit search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.35-4.35"></path>
+        </svg>
+      </button>
+    `;
+    navTools.prepend(searchForm);
+  }
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
