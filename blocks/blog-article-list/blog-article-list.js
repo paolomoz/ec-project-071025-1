@@ -91,7 +91,18 @@ function createArticleCard(article) {
  */
 export default async function decorate(block) {
   // Get the query index path from block content (first cell)
-  const indexPath = block.querySelector('a')?.href || '/blog/query-index.json';
+  const indexPathRaw = block.textContent.trim() || '/blog/query-index.json';
+
+  // Parse URL to extract query parameters
+  let indexPath = indexPathRaw;
+  let authorFilter = null;
+
+  if (indexPathRaw.includes('?')) {
+    const [path, queryString] = indexPathRaw.split('?');
+    indexPath = path;
+    const params = new URLSearchParams(queryString);
+    authorFilter = params.get('author');
+  }
 
   // Clear block content
   block.textContent = '';
@@ -117,11 +128,27 @@ export default async function decorate(block) {
     return;
   }
 
+  // Filter by author if specified
+  let filteredArticles = articles.filter((article) => article.path && article.title);
+
+  if (authorFilter) {
+    filteredArticles = filteredArticles.filter((article) => article.author === authorFilter);
+  }
+
   // Sort by date (newest first) and take top 10
-  const sortedArticles = articles
-    .filter((article) => article.path && article.title)
+  const sortedArticles = filteredArticles
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 10);
+
+  if (sortedArticles.length === 0) {
+    const noArticles = document.createElement('p');
+    noArticles.className = 'blog-no-articles';
+    noArticles.textContent = authorFilter
+      ? `No articles found by ${authorFilter}.`
+      : 'No articles found.';
+    block.append(noArticles);
+    return;
+  }
 
   // Create article list
   const ul = document.createElement('ul');
