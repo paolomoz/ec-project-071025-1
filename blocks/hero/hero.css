@@ -1,3 +1,4 @@
+/* Spectrum-styled Hero block */
 .hero-container .hero-wrapper {
   max-width: unset;
   padding: 0;
@@ -5,15 +6,51 @@
 
 .hero {
   position: relative;
-  padding: 40px 24px;
-  min-height: 300px;
+  padding: var(--spacing-xl) var(--spacing-m);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Dark overlay for better text readability */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
 }
 
 .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 var(--spacing-m);
   color: var(--background-color);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  font-size: var(--heading-font-size-xxl);
+  line-height: 1.2;
+}
+
+.hero p {
+  color: var(--background-color);
+  font-size: var(--body-font-size-m);
+  line-height: 1.6;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  margin: var(--spacing-s) 0;
+}
+
+.hero .button-container {
+  margin-top: var(--spacing-m);
+  display: flex;
+  gap: var(--spacing-s);
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .hero picture {
@@ -32,6 +69,11 @@
 
 @media (width >= 900px) {
   .hero {
-    padding: 40px 32px;
+    padding: 80px var(--spacing-l);
+    min-height: 500px;
+  }
+
+  .hero h1 {
+    font-size: var(--heading-font-size-xxl);
   }
 }

@@ -1,18 +1,66 @@
+/* Spectrum-styled Columns block */
 .columns > div {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.columns > div > div {
+  order: 1;
+  padding: var(--spacing-m);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-medium);
+  transition: box-shadow var(--transition-speed) var(--transition-timing);
+}
+
+.columns > div > div:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+.columns > div > div h3 {
+  margin-top: 0;
+  color: var(--text-color);
+  font-size: var(--heading-font-size-l);
+}
+
+.columns > div > div p {
+  color: var(--text-color-secondary);
+}
+
+.columns > div > div ul {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-m) 0;
+}
+
+.columns > div > div ul li {
+  padding: var(--spacing-xs) 0;
+  color: var(--text-color);
+  position: relative;
+  padding-left: var(--spacing-m);
+}
+
+.columns > div > div ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--link-color);
+  font-weight: bold;
 }
 
 .columns img {
   width: 100%;
 }
 
-.columns > div > div {
-  order: 1;
-}
-
 .columns > div > .columns-img-col {
   order: 0;
+  border: none;
+  padding: 0;
+}
+
+.columns > div > .columns-img-col:hover {
+  box-shadow: none;
 }
 
 .columns > div > .columns-img-col img {
@@ -21,9 +69,9 @@
 
 @media (width >= 900px) {
   .columns > div {
-    align-items: center;
+    align-items: stretch;
     flex-direction: unset;
-    gap: 24px;
+    gap: var(--spacing-l);
   }
 
   .columns > div > div {

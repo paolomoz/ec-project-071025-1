@@ -1,19 +1,39 @@
+/* Spectrum-styled Cards block */
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-m);
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-medium);
   background-color: var(--background-color);
+  overflow: hidden;
+  transition: box-shadow var(--transition-speed) var(--transition-timing),
+              border-color var(--transition-speed) var(--transition-timing);
+}
+
+.cards > ul > li:hover {
+  border-color: var(--border-color-light);
+  box-shadow: var(--shadow-medium);
 }
 
 .cards .cards-card-body {
-  margin: 16px;
+  padding: var(--spacing-m);
+}
+
+.cards .cards-card-body h3 {
+  margin-top: 0;
+  color: var(--text-color);
+}
+
+.cards .cards-card-body p {
+  color: var(--text-color-secondary);
+  line-height: 1.6;
 }
 
 .cards .cards-card-image {
@@ -24,4 +44,9 @@
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  transition: transform var(--transition-speed) var(--transition-timing);
+}
+
+.cards > ul > li:hover img {
+  transform: scale(1.02);
 }
