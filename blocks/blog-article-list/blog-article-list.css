@@ -1,9 +1,4 @@
 /* Blog Article List Block */
-.blog-article-list-wrapper {
-  width: 100%;
-  max-width: none;
-}
-
 .blog-article-list-container {
   max-width: 1200px;
   margin: 40px auto;
@@ -23,20 +18,14 @@
   font-size: var(--body-font-size-m);
 }
 
-/* Block wrapper - should not be grid */
+/* Article Grid */
 .blog-article-list {
-  width: 100%;
-}
-
-/* Article Grid - only the ul */
-.blog-article-list ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 32px;
   list-style: none;
   padding: 0;
   margin: 0;
-  width: 100%;
 }
 
 /* Article Card */
@@ -127,7 +116,7 @@
 
 /* Mobile Responsive */
 @media (width < 600px) {
-  .blog-article-list ul {
+  .blog-article-list {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -139,14 +128,7 @@
 
 /* Tablet */
 @media (width >= 600px) and (width < 900px) {
-  .blog-article-list ul {
+  .blog-article-list {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Desktop */
-@media (width >= 900px) {
-  .blog-article-list ul {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
