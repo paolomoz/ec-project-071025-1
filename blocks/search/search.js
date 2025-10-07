@@ -252,7 +252,19 @@ function searchBox(block, config) {
 
 export default async function decorate(block) {
   const placeholders = await fetchPlaceholders();
-  const source = block.querySelector('a[href]') ? block.querySelector('a[href]').href : '/query-index.json';
+
+  // Get source from link or plain text content
+  let source = '/query-index.json';
+  const link = block.querySelector('a[href]');
+  if (link) {
+    source = link.href;
+  } else {
+    const textContent = block.textContent.trim();
+    if (textContent && textContent.length > 0) {
+      source = textContent;
+    }
+  }
+
   block.innerHTML = '';
   block.append(
     searchBox(block, { source, placeholders }),
