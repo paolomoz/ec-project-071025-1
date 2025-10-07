@@ -23,8 +23,13 @@
   font-size: var(--body-font-size-m);
 }
 
-/* Article Grid */
+/* Block wrapper - should not be grid */
 .blog-article-list {
+  width: 100%;
+}
+
+/* Article Grid - only the ul */
+.blog-article-list ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 32px;
@@ -122,7 +127,7 @@
 
 /* Mobile Responsive */
 @media (width < 600px) {
-  .blog-article-list {
+  .blog-article-list ul {
     grid-template-columns: 1fr;
     gap: 24px;
   }
@@ -134,14 +139,14 @@
 
 /* Tablet */
 @media (width >= 600px) and (width < 900px) {
-  .blog-article-list {
+  .blog-article-list ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* Desktop */
 @media (width >= 900px) {
-  .blog-article-list {
+  .blog-article-list ul {
     grid-template-columns: repeat(3, 1fr);
   }
 }
