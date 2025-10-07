@@ -21,7 +21,7 @@
 /* Article Grid */
 .blog-article-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: 32px;
   list-style: none;
   padding: 0;
@@ -130,5 +130,12 @@
 @media (width >= 600px) and (width < 900px) {
   .blog-article-list {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop */
+@media (width >= 900px) {
+  .blog-article-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
