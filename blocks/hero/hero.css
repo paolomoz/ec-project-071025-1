@@ -20,12 +20,12 @@
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
+  z-index: 2;
 }
 
 .hero > div {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   max-width: 900px;
 }
 
@@ -55,7 +55,7 @@
 
 .hero picture {
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   inset: 0;
   object-fit: cover;
   box-sizing: border-box;
