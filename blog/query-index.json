@@ -1,0 +1,98 @@
+{
+  "total": 10,
+  "offset": 0,
+  "limit": 10,
+  "data": [
+    {
+      "path": "/blog/articles/diy-fashion-upcycling",
+      "title": "DIY Fashion Upcycling: Transform Your Wardrobe Sustainably",
+      "date": "2024-10-05",
+      "author": "Sofia Martinez",
+      "tags": "DIY fashion, upcycling, sustainability",
+      "image": "/blog/images/diy-upcycling-hero.jpg",
+      "excerpt": "Fashion upcycling transforms discarded garments into unique, wearable art. This sustainable practice combines creativity, environmental consciousness, and practical skills."
+    },
+    {
+      "path": "/blog/articles/minimalist-wardrobe-essentials",
+      "title": "Building a Minimalist Wardrobe: Essential Pieces That Work",
+      "date": "2024-10-01",
+      "author": "Emma Thompson",
+      "tags": "minimalism, capsule wardrobe, essentials",
+      "image": "/blog/images/minimalist-wardrobe-hero.jpg",
+      "excerpt": "The minimalist wardrobe philosophy transforms how we approach fashion. Rather than chasing trends, we curate intentional collections of versatile, high-quality pieces."
+    },
+    {
+      "path": "/blog/articles/sustainable-streetwear-revolution",
+      "title": "The Sustainable Streetwear Revolution: Fashion's New Frontier",
+      "date": "2024-09-28",
+      "author": "James Chen",
+      "tags": "sustainable fashion, streetwear, eco-friendly",
+      "image": "/blog/images/sustainable-streetwear-hero.jpg",
+      "excerpt": "Streetwear, once synonymous with fast fashion and hype culture, is undergoing a radical transformation. The new wave of sustainable streetwear brands proves that style and environmental consciousness can coexist."
+    },
+    {
+      "path": "/blog/articles/tech-meets-fashion",
+      "title": "When Tech Meets Fashion: The Future is Wearable",
+      "date": "2024-09-22",
+      "author": "Sofia Martinez",
+      "tags": "tech fashion, wearables, innovation",
+      "image": "/blog/images/tech-fashion-hero.jpg",
+      "excerpt": "The convergence of technology and fashion creates exciting possibilities. From smart fabrics to augmented reality fashion shows, technology is fundamentally changing how we design, produce, and experience clothing."
+    },
+    {
+      "path": "/blog/articles/summer-festival-fashion-2024",
+      "title": "Summer Festival Fashion 2024: Trends That Define the Season",
+      "date": "2024-09-15",
+      "author": "Sofia Martinez",
+      "tags": "festival fashion, summer trends, style",
+      "image": "/blog/images/festival-fashion-hero.jpg",
+      "excerpt": "As festival season reaches its peak, the fashion landscape is more vibrant and eclectic than ever. From desert gatherings to urban music festivals, attendees are pushing creative boundaries."
+    },
+    {
+      "path": "/blog/articles/vintage-fashion-comeback",
+      "title": "The Vintage Fashion Comeback: Why Old is the New New",
+      "date": "2024-09-05",
+      "author": "Sofia Martinez",
+      "tags": "vintage fashion, retro style, thrifting",
+      "image": "/blog/images/vintage-fashion-hero.jpg",
+      "excerpt": "Vintage fashion isn't just a trend—it's a movement. As consumers seek authenticity, quality, and sustainability, vintage clothing offers a compelling alternative to fast fashion's homogeneous offerings."
+    },
+    {
+      "path": "/blog/articles/accessory-trends-2024",
+      "title": "Accessory Trends 2024: The Details That Define Your Look",
+      "date": "2024-08-28",
+      "author": "Emma Thompson",
+      "tags": "accessories, jewelry, fashion trends",
+      "image": "/blog/images/accessories-2024-hero.jpg",
+      "excerpt": "Accessories make the outfit. In 2024, the right accessories don't just complement your look—they define it. This year's trends embrace bold statements, nostalgic revivals, and unexpected combinations."
+    },
+    {
+      "path": "/blog/articles/athleisure-styling-guide",
+      "title": "Mastering Athleisure: The Ultimate Styling Guide",
+      "date": "2024-08-20",
+      "author": "Emma Thompson",
+      "tags": "athleisure, styling tips, activewear",
+      "image": "/blog/images/athleisure-hero.jpg",
+      "excerpt": "Athleisure has evolved from gym-to-street trend to a sophisticated style category. The art of athleisure is balancing comfort with polish, creating looks that transition seamlessly from workout to work to weekend."
+    },
+    {
+      "path": "/blog/articles/color-blocking-trends",
+      "title": "Bold Color Blocking: Making a Statement in 2024",
+      "date": "2024-08-12",
+      "author": "James Chen",
+      "tags": "color trends, bold fashion, styling",
+      "image": "/blog/images/color-blocking-hero.jpg",
+      "excerpt": "Color blocking makes a triumphant return, proving that sometimes the boldest choices create the most memorable looks. This technique—pairing solid blocks of contrasting colors—delivers maximum impact with confident simplicity."
+    },
+    {
+      "path": "/blog/articles/gender-fluid-fashion",
+      "title": "The Gender-Fluid Fashion Movement: Breaking Boundaries",
+      "date": "2024-07-30",
+      "author": "James Chen",
+      "tags": "gender-fluid, inclusivity, modern fashion",
+      "image": "/blog/images/gender-fluid-fashion-hero.jpg",
+      "excerpt": "Fashion is finally catching up to reality. The gender-fluid fashion movement dismantles outdated binary constraints, creating space for authentic self-expression regardless of gender identity."
+    }
+  ],
+  ":type": "sheet"
+}
