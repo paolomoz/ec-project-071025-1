@@ -125,7 +125,7 @@ export default async function decorate(block) {
 
   // Create article list
   const ul = document.createElement('ul');
-  ul.className = 'blog-article-list';
+  ul.className = 'article-grid';
 
   sortedArticles.forEach((article) => {
     const card = createArticleCard(article);
